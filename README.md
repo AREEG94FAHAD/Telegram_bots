@@ -74,7 +74,7 @@ Note: This  script  work base on polling mechanism  and it work 24/7.  That will
 -  Create an account on [Heroku](https://id.heroku.com/login)
 -  Create new app [new app](https://dashboard.heroku.com/apps)
 -  I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized . Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
--  In your local directory, create three files ( Procfile, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
+-  In your local directory, create two files ( Procfile, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
 
 -  Install Flask framework ``` pip install Flask ```
   - In Procfile, type `web: python3 Your_script_name.py`
