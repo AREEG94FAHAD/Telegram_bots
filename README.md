@@ -2,11 +2,11 @@
 
 Table of contents 
 - <a href="#bots">My Bots</a>
-- <a href="upload">Upload methods</a>
-  - <a href="heroku">Heroku</a>
-  - <a href="google">Google Console</a>
-  - <a href="webhook">Web hook</a>
-- <a href="resource">Resources</a>
+- <a href="#upload">Upload methods</a>
+  - <a href="#heroku">Heroku</a>
+  - <a href="#google">Google Console</a>
+  - <a href="#webhook">Web hook</a>
+- <a href="#resource">Resources</a>
 
 
 
@@ -21,3 +21,21 @@ Table of contents
 - [Resize your image](https://github.com/AREEG94FAHAD/resizeimage_bot): A telegram bot for changing the size of an image to any size. It can be used to resize the images to be suitable for posting on social media, or any other platform ✂️🖼️
 - [The Quran Karim](https://github.com/AREEG94FAHAD/quran_bot): A special bot for reading the Quran karim ☪️️☪️️
 - [Video to mp3](https://github.com/AREEG94FAHAD/conv_vid_to_mp3): With this bot, you can now convert your video to mp3 📸 -> 🎤
+
+# <div id="upload"> Upload methods </div>
+
+## Upload to Heroku
+- 1 Create an account on [Heroku](https://id.heroku.com/login)
+- 2 Create new app [new app](https://dashboard.heroku.com/apps)
+- 3 In your local directory create two files ( Procfile, runtime.txt) 
+  - In runtime type `python-3.7.10`  or your python version. Note Heroku Supports specific versions of Python [See More](https://devcenter.heroku.com/articles/python-support).
+  - In Procfile type `worker: python Your_script_name.py`
+  - Create a new repository on github and upload your files
+ - 4 Navigate to https://dashboard.heroku.com/apps/Your-App-Name/deploy/github,  click on github button, search and connect to bot's repository then click on deploy
+ - 5 Navigate to https://dashboard.heroku.com/apps/Your-App-Name, click on Configure Dynos, click on pen icon, switch to active save it. Congratulations, your boot is now running smoothly 
+
+## <div id="google">  Upload to Google Console</div>
+
+  
+
+   
