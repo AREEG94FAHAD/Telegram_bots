@@ -25,14 +25,14 @@ Table of contents
 # <div id="upload"> Upload methods </div>
 
 ## Upload to Heroku
-- 1 Create an account on [Heroku](https://id.heroku.com/login)
-- 2 Create new app [new app](https://dashboard.heroku.com/apps)
-- 3 In your local directory create two files ( Procfile, runtime.txt) 
+-  Create an account on [Heroku](https://id.heroku.com/login)
+-  Create new app [new app](https://dashboard.heroku.com/apps)
+-  In your local directory create two files ( Procfile, runtime.txt) 
   - In runtime type `python-3.7.10`  or your python version. Note Heroku Supports specific versions of Python [See More](https://devcenter.heroku.com/articles/python-support).
   - In Procfile type `worker: python Your_script_name.py`
   - Create a new repository on github and upload your files
- - 4 Navigate to https://dashboard.heroku.com/apps/Your-App-Name/deploy/github,  click on github button, search and connect to bot's repository then click on deploy
- - 5 Navigate to https://dashboard.heroku.com/apps/Your-App-Name, click on Configure Dynos, click on pen icon, switch to active save it. Congratulations, your boot is now running smoothly 
+ -  Navigate to https://dashboard.heroku.com/apps/Your-App-Name/deploy/github,  click on github button, search and connect to bot's repository then click on deploy
+ -  Navigate to https://dashboard.heroku.com/apps/Your-App-Name, click on Configure Dynos, click on pen icon, switch to active save it. Congratulations, your boot is now running smoothly 
 
 ## <div id="google">  Upload to Google Console</div>
 
