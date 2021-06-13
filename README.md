@@ -28,11 +28,11 @@ Table of contents
 -  Create an account on [Heroku](https://id.heroku.com/login)
 -  Create new app [new app](https://dashboard.heroku.com/apps)
 -  I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized . Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
--  In your local directory create three files ( Procfile, runtime.txt, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
+-  In your local directory, create three files ( Procfile, runtime.txt, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
   - In runtime file,  type `python-3.7.10`  or your python version. Note Heroku Supports specific versions of Python [See More](https://devcenter.heroku.com/articles/python-support).
-  - In Procfile type `worker: python Your_script_name.py`
+  - In Procfile, type `worker: python Your_script_name.py`
   - Go to Botfather in telegram and create new bot, add your APITOKEN in script.py
-  - In script.py file add this code 
+  - In script.py file, add this code 
   
 
 ```import telebot
