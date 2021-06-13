@@ -1,7 +1,7 @@
 # Telegram bots
 
 Table of contents 
-- <a href="bots">My Bots</a>
+- <a href="#bots">My Bots</a>
 - <a href="upload">Upload methods</a>
   - <a href="heroku">Heroku</a>
   - <a href="google">Google Console</a>
