@@ -31,7 +31,7 @@ Table of contents
 -  In your local directory create three files ( Procfile, runtime.txt, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
   - In runtime file,  type `python-3.7.10`  or your python version. Note Heroku Supports specific versions of Python [See More](https://devcenter.heroku.com/articles/python-support).
   - In Procfile type `worker: python Your_script_name.py`
-  - Go to Botfather in telegram and create new bot, add your APITOKEN 
+  - Go to Botfather in telegram and create new bot, add your APITOKEN in script.py
   - In script.py file add this code 
   
 
