@@ -59,7 +59,7 @@ def echo_message(message):
 
 bot.polling()
 ```
-
+  - Save all the project dependencies into requirements file using ``` pip freeze > requirements.txt ```
   - Create a new repository on github and upload your files
  -  Navigate to https://dashboard.heroku.com/apps/Your-App-Name/deploy/github,  click on github button, search and connect to bot's repository then click on deploy
  -  Navigate to https://dashboard.heroku.com/apps/Your-App-Name, click on Configure Dynos, click on pen icon, switch to active save it. Congratulations, your boot is now running smoothly 
