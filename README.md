@@ -65,7 +65,7 @@ bot.polling()
  -  Navigate to https://dashboard.heroku.com/apps/Your-App-Name, click on Configure Dynos, click on pen icon, switch to active save it. Congratulations, your boot is now running smoothly 
 
 
-Note: This  script  work base on polling mechanism  and it work 24/7.  This lets you lose  550 free hours of Heroku quickly. So I prefer to deploy your code using webhook.[ For more details see ](https://blog.cloud-elements.com/webhooks-vs-polling-youre-better-than-this)
+Note: This  script  work base on polling mechanism  and it work 24/7.  That will lets you lose  550 free hours of Heroku quickly. So I prefer to deploy your code using webhook.[ For more details see ](https://blog.cloud-elements.com/webhooks-vs-polling-youre-better-than-this)
 
 
 
