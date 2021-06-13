@@ -17,6 +17,6 @@ Table of contents
 - [jokes](https://github.com/AREEG94FAHAD/tell_me_a_joke): Use this bot to change your unhappiness by joke 😂
 - [Lorem ipsum](https://github.com/AREEG94FAHAD/lorem_ip_bot): A Lorem ipsum bot, supports three languages 📝
 - [Photo compressor](https://github.com/AREEG94FAHAD/compression_img_bot): With this bot, you can now compress your photo 🖼️🖼️
-- [Resize your image](https://github.com/AREEG94FAHAD/resizeimage_bot):A telegram bot for changing the size of an image to any size. It can be used to resize the images to be suitable for posting on social media, or any other platform
+- [Resize your image](https://github.com/AREEG94FAHAD/resizeimage_bot): A telegram bot for changing the size of an image to any size. It can be used to resize the images to be suitable for posting on social media, or any other platform
 - [The Quran Karim](https://github.com/AREEG94FAHAD/quran_bot): A special bot for reading the Quran karim
 - [Video to mp3](https://github.com/AREEG94FAHAD/conv_vid_to_mp3): With this bot, you can now convert your video to mp3 📸 -> 🎤
