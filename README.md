@@ -71,6 +71,59 @@ Note: This  script  work base on polling mechanism  and it work 24/7.  This lets
 
 
 ## <div id="webhook">  Upload to Heroku useing  Web hook</div>
+-  Create an account on [Heroku](https://id.heroku.com/login)
+-  Create new app [new app](https://dashboard.heroku.com/apps)
+-  I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized . Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+-  In your local directory, create three files ( Procfile, runtime.txt, script.py) and install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by ``` pip install pyTelegramBotAPI ```
+
+-  Install Flask framework ``` pip install Flask ```
+  - In Procfile, type `web: python3 Your_script_name.py`
+  - Go to Botfather in telegram and create new bot, add your APITOKEN in script.py
+  - In script.py file, add this code 
+  - Replace all https://your_heroku_project.com/ with your app link 
+```
+import os
+
+from flask import Flask, request
+
+import telebot
+
+TOKEN = '<api_token>'
+bot = telebot.TeleBot(TOKEN)
+server = Flask(__name__)
+
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+
+
+@bot.message_handler(func=lambda message: True, content_types=['text'])
+def echo_message(message):
+    bot.reply_to(message, message.text)
+
+
+@server.route('/' + TOKEN, methods=['POST'])
+def getMessage():
+    json_string = request.get_data().decode('utf-8')
+    update = telebot.types.Update.de_json(json_string)
+    bot.process_new_updates([update])
+    return "!", 200
+
+
+@server.route("/")
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url='https://your_heroku_project.com/' + TOKEN)
+    return "!", 200
+
+
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+```
+- Save all the project dependencies into requirements file using ``` pip freeze > requirements.txt ```
+- Create a new repository on github and upload your files
+-  Navigate to https://dashboard.heroku.com/apps/Your-App-Name/deploy/github,  click on github button, search and connect to bot's repository then click on deploy
 
 
 ## <div id="google">  Upload to Google Console</div>
