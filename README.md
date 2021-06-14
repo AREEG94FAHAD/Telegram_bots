@@ -127,7 +127,11 @@ if __name__ == "__main__":
 
 
 ## <div id="google">  Upload to Google Console</div>
-
-  
+- Create an account on [Google console](https://console.cloud.google.com/)
+- Link your Credit Card to get 300$ Valid for 90 days.
+- From Sidebar navigate to Compute Engine  as shown in figure below ![Capture](https://user-images.githubusercontent.com/30151596/121922925-12645400-cd43-11eb-8058-51eea8b328e2.PNG)
+- Click on button called Create new instance . There are a lot of options I kept the default sitting then click create.
+![c2](https://user-images.githubusercontent.com/30151596/121924262-6885c700-cd44-11eb-8b16-42b33cee5326.PNG)
+- Click on SSH 
 
    
