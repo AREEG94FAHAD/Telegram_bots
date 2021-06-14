@@ -4,8 +4,9 @@ Table of contents
 - <a href="#bots">My Bots</a>
 - <a href="#upload">Upload methods</a>
   - <a href="#heroku">Heroku</a>
-  -  <a href="#webhook">Web hook</a>
+  -  <a href="#webhook">Heroku Webhooks</a>
   - <a href="#google">Google Console</a>
+  - <a href="#googlewebhook">Google Webhooks</a>
 - <a href="#resource">Resources</a>
 
 
@@ -70,7 +71,7 @@ Note: This  script will work base on polling mechanism  and it work 24/7.  That 
 
 
 
-## <div id="webhook">  Upload to Heroku useing  Web hook</div>
+## <div id="webhook">  Upload to Heroku useing  Webhooks</div>
 -  Create an account on [Heroku](https://id.heroku.com/login)
 -  Create new app [new app](https://dashboard.heroku.com/apps)
 -  I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized . Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
@@ -142,3 +143,65 @@ if __name__ == "__main__":
 - To use tmux type ``` Ctrl+ c``` then install tmux  by type, ``` sudo apt install tmux```
 - type ``` tmux ```then run your script by type ``` python3 script_name.py ``` close the windows and go to start new thing. I guarantee that your bot won't close.
 - To stop the bot type, ```ctrl + c ``` to back to main screen type, ``` ctrl + d ```  to start new tmux type ``` tmux ```, to terminate your bot type, you can run multi script by close the windows and open it again, type ``` tmux``` and run your another script. to terminate anyone just type ```tmuc ls``` this will display all your tmux sessions. Can  terminate anyone by type, ``` tmux a-t_number```
+
+
+<!-- ## <div id="googlewebhook">  Upload to Google Console using Webhooks</div>
+- Repate first seven points of Upload to Google Console
+- Install flask by type, ```pip3 install flask ```
+- Create new file in your directory called script.py,  past below code. Upload file to google cloud as mentioned above. 
+``` 
+import os
+
+from flask import Flask, request
+
+import telebot
+
+TOKEN = '<api_token>'
+bot = telebot.TeleBot(TOKEN)
+server = Flask(__name__)
+
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+
+
+@bot.message_handler(func=lambda message: True, content_types=['text'])
+def echo_message(message):
+    bot.reply_to(message, message.text)
+
+
+@server.route('/' + TOKEN, methods=['POST'])
+def getMessage():
+    json_string = request.get_data().decode('utf-8')
+    update = telebot.types.Update.de_json(json_string)
+    bot.process_new_updates([update])
+    return "!", 200
+
+
+@server.route("/")
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url='https://your_heroku_project.com/' + TOKEN)
+    return "!", 200
+
+
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+```
+- Your app is finished and ready to be containerized and uploaded to Container Registry.
+- create new file by type  ``` touch Dockerfile ```, type ``` nano Dockerfile ``` and past code below. Click ```ctrl+x then press, y, then enter.```
+```
+FROM python:3.7-slim
+ENV PYTHONUNBUFFERED True
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
+RUN pip install Flask gunicorn
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 script:app
+```
+- Add a .dockerignore file to exclude files from your container image. By type, ```touch touch .dockerignore``` then nano .dockerignore add code below then  Click ```ctrl+x then press, y, then enter.```
+```
+- Build your container image using Cloud Build, by runing this command 
+```
+ -->
