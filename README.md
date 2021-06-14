@@ -138,6 +138,7 @@ if __name__ == "__main__":
 - Install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by type  ``` pip3 install pyTelegramBotAPI ```
 - Upload your script_name.py from local directory to google console by click on sitting icon in top correner and select upload file. ![up](https://user-images.githubusercontent.com/30151596/121935143-c9b39780-cd50-11eb-9288-c02a84261baa.PNG)
 
-- Run the script by type, ``` python3 script_name.py ``` . If you close the ssh window, then bot will stop running. To avoid that, you need to use [tmux](https://github.com/tmux/tmux) : To allow your script running in background if you close ssh windows after close ssh windows.
+- Run the script by type, ``` python3 script_name.py ``` . If you close the ssh window, then bot will stop running. To avoid that, you need to use [tmux](https://github.com/tmux/tmux) : To allow your script running in background even if I close the SSH Windows.
 - To use tmux type ``` Ctrl+ c``` then install tmux  by type, ``` sudo apt install tmux```
-- type ``` tmux ```then run your script by type ``` python3 script_name.py ```
+- type ``` tmux ```then run your script by type ``` python3 script_name.py ``` close the windows and go to start new thing. I guarantee that your bot won't close
+- To stop the bot type, ```ctrl + c ``` to back to main screen type, ``` ctrl + d ```  to start new tmux type ``` tmux ```, to terminate your bot type, you can run multi script by close the windows and open it again, type ``` tmux``` and run your another script. to terminate any one just type ```tmuc ls``` this will display all your tmux. Can  terminate anyone by type, ``` tmux a-t_number```
