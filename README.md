@@ -129,9 +129,14 @@ if __name__ == "__main__":
 ## <div id="google">  Upload to Google Console</div>
 - Create an account on [Google console](https://console.cloud.google.com/)
 - Link your Credit Card to get 300$ Valid for 90 days.
-- From Sidebar navigate to Compute Engine  as shown in figure below ![Capture](https://user-images.githubusercontent.com/30151596/121922925-12645400-cd43-11eb-8058-51eea8b328e2.PNG)
+- From Sidebar navigate to Compute Engine  as shown in figure below 
+![Capture](https://user-images.githubusercontent.com/30151596/121922925-12645400-cd43-11eb-8058-51eea8b328e2.PNG)
 - Click on button called Create new instance . There are a lot of options I kept the default sitting then click create.
 ![c2](https://user-images.githubusercontent.com/30151596/121924262-6885c700-cd44-11eb-8b16-42b33cee5326.PNG)
-- Click on SSH 
-
-   
+- Click on SSH and check Python version ``` python3 -V  ```in usually, you will see the python is already installed. If no, install python by type ``` sudo apt-get install python version
+- Install by ``` sudo apt install python3-pip ```
+- Install  [pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/) by type  ``` pip3 install pyTelegramBotAPI ```
+- Upload your script_name.py from local directory to google console by click on sitting icon in top correner and select upload file. ![sccccc](https://user-images.githubusercontent.com/30151596/121930582-34fa6b00-cd4b-11eb-953c-42d01ca16428.png)
+- Run the script by type, ``` python3 script_name.py ``` . If you close the ssh window, then bot will stop running. To avoid that, you need to use [tmux](https://github.com/tmux/tmux) : To allow your script running in background if you close ssh windows after close ssh windows.
+- To use tmux type ``` Ctrl+ c``` then install tmux  by type, ``` sudo apt install tmux```
+- type ``` tmux ```then run your script by type ``` python3 script_name.py ```
