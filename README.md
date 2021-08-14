@@ -15,6 +15,7 @@ Table of contents
 - [Digital Cryptocurrency](https://github.com/AREEG94FAHAD/currencies_bot): With this bot, you can now monitor the prices of more than 12 digital Cryptocurrency 💰 💰
 - [Text translator](https://github.com/AREEG94FAHAD/translate_text_bot): Translate your text  📜AR ➡️ 📜EN  and 📜EN ➡️ 📜AR
 - [PDF merge](https://github.com/AREEG94FAHAD/pdfmerge_bot): With this bot, you can now simply merge your PDF files 📋
+- [Remaining days](https://github.com/AREEG94FAHAD/remaining_days_bot): Calculate number of days between today and a date
 - [Jokes](https://github.com/AREEG94FAHAD/tell_me_a_joke): Use this bot to change your unhappiness by joke 😂
 - [Convert voice to text](https://github.com/AREEG94FAHAD/co-voice-txt-and-tran): A telegram bot to convert a voice to text and translating it 🎤 ➡️ 📜
 - [Lorem ipsum](https://github.com/AREEG94FAHAD/lorem_ip_bot): A Lorem ipsum bot, supports three languages 📝
